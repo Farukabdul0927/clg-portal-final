@@ -1,0 +1,133 @@
+/* =========================================================
+   COLLEGE PORTAL - CLASSIC WARM BROWN THEME
+   ========================================================= */
+:root{
+ --brown-950:#061a36; --brown-900:#082b5c; --brown-800:#0b3f7f; --brown-700:#145aa8;
+ --brown-600:#1b6fc1; --gold:#f2b51d; --gold-light:#ffe28a; --cream:#eef6ff;
+ --paper:#ffffff; --line:#c9d9ee; --text:#18263a; --muted:#5c6b7f; --danger:#c0392b;
+}
+*{box-sizing:border-box}
+html,body{min-height:100%;}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--cream);color:var(--text);}
+body.classic-page{background:linear-gradient(135deg,#eaf3ff,#fbf8f2 55%,#dfeeff);}
+
+/* Sidebar */
+.portal-sidebar{position:fixed;left:0;top:0;bottom:0;width:245px;background:linear-gradient(180deg,var(--brown-950),var(--brown-900));color:#fff;z-index:1000;box-shadow:4px 0 18px rgba(6,26,54,.18);display:flex;flex-direction:column;}
+.portal-brand{height:78px;padding:0 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(242,181,29,.22);font-size:22px;font-weight:bold;white-space:nowrap;}
+.portal-brand .brand-mark{width:38px;height:38px;border:1px solid rgba(242,181,29,.65);border-radius:50%;display:grid;place-items:center;color:var(--gold-light);font-size:18px;}
+.portal-role{padding:13px 20px 8px;color:#b9cee8;text-transform:uppercase;letter-spacing:1.5px;font-size:10px;}
+.portal-nav{padding:4px 10px;overflow:auto;flex:1;}
+.portal-nav a{display:flex;align-items:center;gap:12px;color:#eee4d7;text-decoration:none;padding:11px 13px;border-radius:7px;margin:3px 0;font-size:14px;transition:.18s;}
+.portal-nav a:hover{background:rgba(242,181,29,.18);color:#fff;}
+.portal-nav a.active{background:linear-gradient(90deg,var(--gold),#9e6b2d);color:#fff;box-shadow:inset 3px 0 0 #f2d39c;}
+.portal-nav i{width:20px;text-align:center;color:#ffd45a;}
+.portal-nav .danger{color:#f0c5bd;margin-top:12px;}
+.portal-user{padding:13px 16px;border-top:1px solid rgba(242,181,29,.2);font-size:12px;color:#c7d8ec;}
+
+/* Main shell */
+.portal-main{margin-left:245px;min-height:100vh;padding:28px 34px 45px;}
+.page-topbar{background:linear-gradient(90deg,var(--brown-900),var(--brown-700));color:#fff;padding:20px 26px;border-radius:10px;margin-bottom:22px;box-shadow:0 7px 22px rgba(6,26,54,.14);}
+.page-topbar h1{margin:0;font-size:28px;color:#fff;}
+.page-topbar p{margin:6px 0 0;color:#d7e8fb;}
+
+/* Generic existing containers */
+.container{max-width:1200px;margin:0 auto;padding:0;}
+.portal-main>.container{max-width:none;}
+.header{background:linear-gradient(90deg,var(--brown-950),var(--brown-700)) !important;color:#fff !important;border-radius:10px;padding:20px 25px !important;margin-bottom:22px;box-shadow:0 7px 20px rgba(6,26,54,.12);}
+.header h1,.header h2,.header p{color:#fff !important;}
+h1,h2,h3{color:var(--brown-900);}
+hr{border:0;border-top:1px solid var(--line);margin:24px 0;}
+
+.card,.box,.welcome,.student-info,.students-box,.table-box,.profile-box,.result-card,.existing,.assignment,.notice,.top-box,.stat,.search-box,.add-notice,.pdf,.form-card{background:var(--paper) !important;border:1px solid var(--line);border-radius:10px !important;box-shadow:0 5px 18px rgba(6,35,75,.08) !important;}
+button,.button,.back-btn,.back,.save,.save-btn{background:var(--brown-800) !important;color:#fff !important;border:1px solid var(--brown-800) !important;border-radius:6px !important;}
+button:hover,.button:hover,.back-btn:hover,.back:hover,.save:hover,.save-btn:hover{background:var(--brown-700) !important;}
+input,textarea,select{border:1px solid #b9cbe0 !important;background:#ffffff !important;color:var(--text) !important;border-radius:6px !important;}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold) !important;box-shadow:0 0 0 3px rgba(242,181,29,.14) !important;}
+table{width:100%;border-collapse:separate;border-spacing:0;background:var(--paper);border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+th{background:var(--brown-800) !important;color:#fff !important;font-weight:bold;}
+th,td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;}
+tr:last-child td{border-bottom:0;}
+tbody tr:nth-child(even){background:#f5f9ff;}
+tbody tr:hover{background:#e8f2ff;}
+
+/* Dashboard */
+.dashboard-welcome{position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(58,36,23,.98),rgba(96,64,37,.90)),url('../images/college_background.png') center/cover;color:#fff;border-radius:11px;padding:27px 30px;min-height:145px;box-shadow:0 8px 24px rgba(6,26,54,.16);}
+.dashboard-welcome h1{color:#fff;margin:0 0 7px;font-size:29px;}
+.dashboard-welcome p{margin:5px 0;color:#e3efff;}
+.dashboard-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin:18px 0;}
+.summary-item{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:17px 18px;box-shadow:0 4px 13px rgba(6,35,75,.06);}
+.summary-item small{display:block;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;font-size:10px;margin-bottom:5px;}
+.summary-item strong{font-size:17px;color:var(--brown-900);}
+
+/* Teacher editable marks */
+.marks-table td{vertical-align:middle;}
+.inline-edit{display:none;}
+.inline-edit.show{display:table-row;}
+.edit-btn{background:var(--gold) !important;border-color:var(--gold) !important;padding:7px 12px !important;}
+.cancel-btn{background:#76695d !important;display:none;}
+
+/* Responsive */
+@media(max-width:900px){.portal-sidebar{width:205px}.portal-main{margin-left:205px;padding:20px}.dashboard-summary{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.portal-sidebar{position:fixed;left:0;top:0;bottom:0;width:72px;height:100vh;min-height:0}.portal-brand{height:64px;padding:0;justify-content:center}.portal-brand span:not(.brand-mark),.portal-role,.portal-user{display:none}.portal-nav{display:block;padding:6px 7px;overflow:auto}.portal-nav a{justify-content:center;padding:12px 4px;margin:4px 0;font-size:0;min-height:42px}.portal-nav a i{font-size:18px;width:auto}.portal-nav a span{display:none}.portal-main{margin-left:72px;padding:14px}.dashboard-summary{grid-template-columns:1fr}.page-topbar h1{font-size:23px}table{display:block;overflow-x:auto;white-space:nowrap}.portal-main>.container{width:100%}.chat-layout{grid-template-columns:1fr}.chat-boards{display:block;max-height:180px;overflow:auto}.chat-boards h3{display:block}.board-btn{white-space:normal}}
+
+
+/* =========================================================
+   BLUE + GOLD PROFESSIONAL THEME OVERRIDE
+   ========================================================= */
+:root{--navy:#061a36;--blue:#0b3f7f;--blue2:#145aa8;--blue3:#1b6fc1;--gold:#f2b51d;--gold-light:#ffe28a;--paper:#fff;--line:#c9d9ee;--text:#18263a;--muted:#5c6b7f;--danger:#c0392b;}
+.portal-sidebar{background:linear-gradient(180deg,#061a36,#082b5c)!important;}
+.portal-nav a.active{background:linear-gradient(90deg,#f2b51d,#d99a08)!important;color:#061a36!important;box-shadow:inset 3px 0 0 #fff3a6!important;}
+.portal-nav a:hover{background:rgba(242,181,29,.16)!important;}
+.portal-main{background:transparent;}
+.page-topbar,.header{background:linear-gradient(90deg,#061a36,#145aa8)!important;}
+.dashboard-welcome{background:linear-gradient(90deg,rgba(6,26,54,.98),rgba(20,90,168,.90)),url('../images/college_background.png') center/cover!important;}
+.card,.box,.welcome,.student-info,.students-box,.table-box,.profile-box,.result-card,.existing,.assignment,.notice,.top-box,.stat,.search-box,.add-notice,.pdf,.form-card,.files-card,.upload-card{background:#fff!important;border-color:#c9d9ee!important;}
+button,.button,.back-btn,.back,.save,.save-btn{background:#0b3f7f!important;border-color:#0b3f7f!important;}
+button:hover,.button:hover,.back-btn:hover,.back:hover,.save:hover,.save-btn:hover{background:#145aa8!important;}
+.edit-btn{background:#f2b51d!important;border-color:#f2b51d!important;color:#061a36!important;}
+th{background:#0b3f7f!important;}
+tbody tr:nth-child(even){background:#f5f9ff!important;}
+tbody tr:hover{background:#e8f2ff!important;}
+input,textarea,select{background:#fff!important;border-color:#b9cbe0!important;}
+input:focus,textarea:focus,select:focus{border-color:#f2b51d!important;box-shadow:0 0 0 3px rgba(242,181,29,.16)!important;}
+.day-name{background:#e1efff!important;color:#082b5c!important;}
+.private-messages{background:#eef6ff!important;}
+.pbubble{background:#fff!important;border-color:#c9d9ee!important;}
+.mine .pbubble{background:#e1efff!important;border-color:#b9cbe0!important;}
+.chat-layout,.private-card{border-color:#c9d9ee!important;}
+.board-btn,.reply-teacher,.private-plus{background:#e7f1fc!important;color:#0b3f7f!important;border-color:#c9d9ee!important;}
+.portal-update-toast{background:#061a36!important;border-left-color:#f2b51d!important;}
+
+/* =========================================================
+   KUET PROFESSIONAL BRAND SYSTEM
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+:root{
+  --kuet-navy:#061a36;
+  --kuet-blue:#0b3f7f;
+  --kuet-blue2:#145aa8;
+  --kuet-gold:#e7ad2f;
+  --kuet-gold2:#f6d477;
+  --kuet-cream:#f7f9fc;
+}
+html,body{font-family:'Inter',Arial,Helvetica,sans-serif!important;}
+h1,h2,h3,h4,.portal-brand,.page-topbar h1,.header h1,.header h2,.dashboard-welcome h1{font-family:'Cinzel',Georgia,'Times New Roman',serif!important;letter-spacing:.15px;}
+.portal-sidebar{width:260px!important;background:linear-gradient(180deg,#031326 0%,#062a55 55%,#061a36 100%)!important;border-right:1px solid rgba(231,173,47,.38);}
+.portal-brand{height:92px!important;padding:10px 16px!important;gap:12px!important;white-space:normal!important;line-height:1.05!important;font-size:15px!important;text-transform:uppercase;letter-spacing:.4px;}
+.portal-brand .brand-mark{width:54px!important;height:54px!important;min-width:54px!important;border:0!important;border-radius:50%!important;background:#fff!important;padding:3px!important;box-shadow:0 0 0 2px rgba(231,173,47,.7),0 5px 16px rgba(0,0,0,.25)!important;}
+.portal-brand .brand-mark img{width:100%;height:100%;object-fit:contain;border-radius:50%;display:block;}
+.portal-brand .brand-title{color:#fff;font-weight:700;display:block;}
+.portal-brand .brand-title span{color:var(--kuet-gold2);display:block;margin-top:3px;}
+.portal-role{color:#e7d49d!important;}
+.portal-nav a{font-family:'Inter',Arial,sans-serif!important;color:#e8eef7!important;border:1px solid transparent;padding:10px 12px!important;}
+.portal-nav a.active{background:linear-gradient(90deg,#e7ad2f,#f6d477)!important;color:#061a36!important;font-weight:700;}
+.portal-nav a.active i{color:#061a36!important;}
+.portal-nav a:hover{background:rgba(231,173,47,.12)!important;border-color:rgba(231,173,47,.18)!important;}
+.portal-main{margin-left:260px!important;padding:28px 34px 45px!important;}
+.page-topbar,.header{border:1px solid rgba(231,173,47,.32)!important;box-shadow:0 10px 28px rgba(3,19,38,.14)!important;}
+.card,.box,.welcome,.student-info,.students-box,.table-box,.profile-box,.result-card,.existing,.assignment,.notice,.top-box,.stat,.search-box,.add-notice,.pdf,.form-card,.files-card,.upload-card,.chat-boards,.chat-card,.private-card,.timetable-card{box-shadow:0 8px 24px rgba(6,26,54,.08)!important;}
+button,.button,.back-btn,.back,.save,.save-btn{font-family:'Inter',Arial,sans-serif!important;font-weight:600!important;}
+.dashboard-welcome{background:linear-gradient(90deg,rgba(3,19,38,.94),rgba(8,56,112,.74)),url('../images/college_background.png') center/cover!important;border:1px solid rgba(231,173,47,.35);}
+
+@media(max-width:900px){.portal-sidebar{width:220px!important}.portal-main{margin-left:220px!important;}}
+@media(max-width:680px){.portal-sidebar{width:72px!important}.portal-main{margin-left:72px!important}.portal-brand{height:68px!important;padding:7px 0!important;justify-content:center!important}.portal-brand .brand-mark{width:46px!important;height:46px!important;min-width:46px!important}.portal-brand .brand-title{display:none!important}}
