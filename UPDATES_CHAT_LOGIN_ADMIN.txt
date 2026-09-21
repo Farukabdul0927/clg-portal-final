@@ -1,0 +1,12 @@
+COLLEGE PORTAL - LOGIN / CHAT / ADMIN ACTIVITY UPDATE
+
+1. Login now starts by asking Student or Teacher. The other role's login form is not shown until selected.
+2. Phone number is not used anywhere.
+3. Private chat polling now keeps the same browser-tab session by sending the tab ID with AJAX requests.
+4. Student-to-student and teacher-to-student private conversations use a robust participant filter that supports both old and new message rows.
+5. Private messages are stored in the database and are not deleted by logout.
+6. Private Chat now shows Recent Conversations so stored history can be reopened after logging back in.
+7. Student inbox keeps teacher replies and allows selecting a teacher to reply.
+8. Student/teacher/admin logout activity is explicitly recorded for the Admin Portal.
+9. Existing automatic Admin activity logging remains enabled for logins, account creation, uploads, edits, chat sends/edits, timetable/results/notices/account changes, and other POST actions.
+10. Group chat and private chat polling now use the correct tab-specific session.
